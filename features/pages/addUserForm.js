@@ -2,28 +2,28 @@
 module.exports = {
 
     addUserForm: {
-        self: $('form[name="smartTableValidForm"]'),
-        firstNameInput: $('input[name="FirstName"]'),
-        lastNameInput: $('input[name="LastName"]'),
-        userNameInput: $('input[name="UserName"]'),
-        passwordInput: $('input[name="Password"]'),
+        self: $('[name="smartTableValidForm"]'),
+        firstNameInput: $('[name="FirstName"]'),
+        lastNameInput: $('[name="LastName"]'),
+        userNameInput: $('[name="UserName"]'),
+        passwordInput: $('[name="Password"]'),
         customerCheckbox: $('tbody > tr:nth-child(5) > td:nth-child(2)'),
-        roleDropdown: $('select[name="RoleId"]'),
-        emailInput: $('input[name="Email"]'),
-        phoneInput: $('input[name="Mobilephone"]'),
+        roleDropdown: $('[name="RoleId"]'),
+        emailInput: $('[name="Email"]'),
+        phoneInput: $('[name="Mobilephone"]'),
         saveBtn: $('.btn-success'),
         closeBtn: $('.btn-danger')
     },
 
     customerCheckbox: {
-        companyAAA: $('input[value="15"]'),
-        companyBBB: $('input[value="16"]')
+        companyAAA: $('[value="15"]'),
+        companyBBB: $('[value="16"]')
     },
 
     roleDropdown: {
-        admin: $('option[value="2"]'),
-        customer: $('option[value="1"]'),
-        salesTeam: $('option[value="0"]')
+        admin: $('[value="2"]'),
+        customer: $('[value="1"]'),
+        salesTeam: $('[value="0"]')
     },
 
     fillForm: function (data) {
