@@ -1,4 +1,3 @@
-const assert = require('assert');
 const chai = require('chai');
 const chaiAsPromised = require('chai-as-promised');
 chai.use(chaiAsPromised);
@@ -17,10 +16,8 @@ const { Given, When, Then } = require('cucumber');
     browser.waitForAngular(); 
     table.tablePage.userTable.isPresent();
     table.tablePage.addButton.click();
-    
     addUserForm.fillForm(dataTable.rows());
     addUserForm.submitForm();
-    return browser.waitForAngular();
   });
 
   Then('I can see {string} in the board', function (name, callback) {
@@ -32,13 +29,11 @@ const { Given, When, Then } = require('cucumber');
     table.findEditUser(oldName);
     addUserForm.editName(dataTable.rows()[0][0]);
     addUserForm.submitForm();
-    return browser.waitForAngular();
   });
 
   Then('I can delete {string} from the board', function (name) {
     table.findDelete(name);
     table.acceptModal();
-    return browser.waitForAngular();
   });
 
   Then('I can not see {string} in the board', function (name, callback) {
