@@ -27,7 +27,7 @@ module.exports = {
     },
 
     fillForm: function (data) {
-        var form = this.addUserForm;
+        let form = this.addUserForm;
         this.clearAllFields();
         form.firstNameInput.sendKeys(data[0][0]);
         form.lastNameInput.sendKeys(data[0][1]);
@@ -40,7 +40,7 @@ module.exports = {
     },
 
     chooseCompany: function (company) {
-        var checkbox = this.customerCheckbox;
+        let checkbox = this.customerCheckbox;
         if (company == "Company AAA") {
             checkbox.companyAAA.click();
         }
@@ -50,8 +50,8 @@ module.exports = {
     },
 
     selectRole: function (role) {
-        var select = this.roleDropdown;
-        var form = this.addUserForm;
+        let select = this.roleDropdown;
+        let form = this.addUserForm;
         form.roleDropdown.click();
         if (role == "Admin") {
             select.admin.click();
@@ -62,16 +62,16 @@ module.exports = {
         }
     },
     submitForm: function () {
-        var form = this.addUserForm;
+        let form = this.addUserForm;
         form.saveBtn.click();
     },
     editName: function (name) {
-        var form = this.addUserForm;
+        let form = this.addUserForm;
         form.firstNameInput.clear();
         form.firstNameInput.sendKeys(name);
     },
     clearAllFields(){
-        var form = this.addUserForm;
+        let form = this.addUserForm;
         form.firstNameInput.clear();
         form.lastNameInput.clear();
         form.userNameInput.clear();
